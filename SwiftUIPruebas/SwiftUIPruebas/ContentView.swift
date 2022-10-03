@@ -9,10 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hola Mundo")
+        Text("Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido.jnwdbwkjbcjcbwqkjcbwjcbwkcbkb")
             .fontWeight(.bold)
-            .font(.system(size:45, design: .rounded))
+            .font(.custom("Arial", size: 25))
             .foregroundColor(.red)
+            .multilineTextAlignment(.center)
+            .lineLimit(nil)
+            .truncationMode(.middle).lineSpacing(8)
+            .padding(15)
+//            .rotationEffect(.degrees(15),anchor: UnitPoint(x: 0, y: 0))
+            .rotation3DEffect(.degrees(50), axis:
+                                (x: 1, y: 0, z: 0))
+            
     }
 }
 

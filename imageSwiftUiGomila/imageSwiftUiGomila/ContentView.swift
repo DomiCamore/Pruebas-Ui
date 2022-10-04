@@ -25,11 +25,40 @@ struct ContentView: View {
 //            .edgesIgnoringSafeArea(.vertical)
         // enmarcado
             .aspectRatio(contentMode:.fill)
-//            .frame(width:300)
+         // importante zona de trabajo
+            .frame(width:300)
 //            .clipped()
 //            .clipShape(Capsule())
-            .opacity(0.5)
-    
+            .opacity(0.9)
+           
+            .overlay(
+//                Image(systemName:"heart.fill")
+//            .font(.system(size: 60))
+//                    .foregroundColor(.pink)
+//                    .opacity(0.5)
+                
+//                Text("que ganas de volver a new york,peru,bvbehvb vbehbv y despues del viaje ")
+//                    .fontWeight(.bold)
+//                    .font(.system(.headline,design:.rounded))
+//                    .foregroundColor(.red)
+//                    .padding()
+//                    .background(Color.gray)
+//                    .cornerRadius(10)
+//                    .padding()
+//                ,
+//                    alignment: .bottom
+                Capsule()
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
+                    .overlay(
+                    Text("New York")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .frame(width:250)
+                    )
+            )
+     
 }
 
 struct ContentView_Previews: PreviewProvider {

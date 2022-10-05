@@ -31,14 +31,17 @@ struct SwiftUIViewAnterior: View {
                 
                 // bordes entre cajas de price
             }
-            .padding(.all)
+            .padding(10)
             //Tercer price view
             ZStack{
                 PriceView(title: "Definitivo1",
                           price: "12.99",
-                          subtitle: "todo esta incluido",
+                          subtitle: "Todos los cursos online",
                           TextColor: .white,
-                          backgroundColor:.black).padding(.horizontal)
+                          backgroundColor:.black,
+                          icon: "lightbulb"
+                           
+                ).padding(.horizontal)
                 
                 //Zstack etiqueta
                 Text("Conviertete en un master en el universo")
@@ -48,9 +51,9 @@ struct SwiftUIViewAnterior: View {
                     .padding(6)
                     .cornerRadius(20)
                     .background(Color(red:240/255,green: 180/255,blue: 50/255))
-                    .offset(x: 0, y: -65)
+                    .offset(x: 0, y: -85)
             }.padding(.vertical)
-            
+             
             Spacer()
         }
     }
@@ -87,10 +90,19 @@ struct HeaderView: View {
         var subtitle: String
         var TextColor:Color
         var backgroundColor:Color
+        var icon : String?
         
         var body: some View {
             
             VStack{
+                //funcion transformar ({ })  variable del clousure
+                icon.map({
+                    Image(systemName: $0) // 0$ = icon 1era
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                    
+                })
+                
                 Text(title)
                     .font(.system(.title, design: .rounded))
                     .fontWeight(.bold)

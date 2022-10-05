@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		729EC7EC28EE1C2B001CFE15 /* SwiftUIViewAnterior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729EC7EB28EE1C2B001CFE15 /* SwiftUIViewAnterior.swift */; };
 		72C20C0128EB3A170038FC5F /* SwiftUIPruebasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C20C0028EB3A170038FC5F /* SwiftUIPruebasApp.swift */; };
 		72C20C0328EB3A170038FC5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C20C0228EB3A170038FC5F /* ContentView.swift */; };
 		72C20C0528EB3A1A0038FC5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C20C0428EB3A1A0038FC5F /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		729EC7EB28EE1C2B001CFE15 /* SwiftUIViewAnterior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewAnterior.swift; sourceTree = "<group>"; };
 		72C20BFD28EB3A170038FC5F /* SwiftUIPruebas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPruebas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C20C0028EB3A170038FC5F /* SwiftUIPruebasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPruebasApp.swift; sourceTree = "<group>"; };
 		72C20C0228EB3A170038FC5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				72C20C0228EB3A170038FC5F /* ContentView.swift */,
 				72C20C0428EB3A1A0038FC5F /* Assets.xcassets */,
 				72C20C0628EB3A1A0038FC5F /* Preview Content */,
+				729EC7EB28EE1C2B001CFE15 /* SwiftUIViewAnterior.swift */,
 			);
 			path = SwiftUIPruebas;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729EC7EC28EE1C2B001CFE15 /* SwiftUIViewAnterior.swift in Sources */,
 				72C20C0328EB3A170038FC5F /* ContentView.swift in Sources */,
 				72C20C0128EB3A170038FC5F /* SwiftUIPruebasApp.swift in Sources */,
 			);

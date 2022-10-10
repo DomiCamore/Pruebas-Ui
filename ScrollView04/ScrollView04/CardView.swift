@@ -2,16 +2,25 @@
 //  CardView.swift
 //  ScrollView04
 //
-//  Created by Joseph Estanislao Calla Moreyra on 10/6/22.
+//  Created by  on 10/6/22.
 //
 
 import SwiftUI
 
 struct CardView: View {
+    
+    var imageName : String
+    var authorName : String
+    var coursetitle : String
+    var originalPrice : String
+    var discountPrice : String
+    
+    
+    
     var body: some View {
         
         VStack{
-            Image("viajero")
+            Image(imageName)
                 .resizable()
                 .frame(width: 350, height: 250)
                 .aspectRatio(contentMode: .fit)
@@ -20,10 +29,10 @@ struct CardView: View {
             
             HStack {
                 VStack(alignment:.leading){
-                    Text("JUAN GABRIEL GOMILA")
+                    Text(authorName)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text("Curso de SwiftUI en udemy con ios 13 desde 0".uppercased())
+                    Text(coursetitle.uppercased())
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
@@ -31,11 +40,11 @@ struct CardView: View {
                         
                     HStack {
                        
-                        Text("18.99$")
+                        Text(originalPrice)
                             .font(.subheadline)
                             .foregroundColor(.primary)
                        
-                        Text("18.99$")
+                        Text(discountPrice)
                             .font(.caption)
                             .foregroundColor(.secondary)
                             .strikethrough()
@@ -58,6 +67,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(imageName: "machupicchu", authorName: "Juan Gabriel Gomila", coursetitle: "DISEÑO DE APP PARA IOS 13 CON SWIFT UI DESDE O", originalPrice: "14.00", discountPrice: "12.99")
     }
 }

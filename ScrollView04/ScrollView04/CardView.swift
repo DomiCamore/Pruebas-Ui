@@ -23,6 +23,7 @@ struct CardView: View {
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+               
         
             HStack {
                 VStack(alignment:.leading){

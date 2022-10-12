@@ -90,18 +90,13 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .font(.largeTitle)
                     }// modificando a toda la caja
-                    
-                    .padding()
-                    .background(Color.red)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .cornerRadius(60)
                 }
+                .buttonStyle(buttonBasicStyle2())
                 
             }
             //4.- Gradientes
             Button(action: {
-                print("Boton con icono 4 pulsada")
+                print("Eliminar pulsadaverde")
                 
             }) { // incrustar
                 HStack {
@@ -109,24 +104,16 @@ struct ContentView: View {
                     
                     Text("Eliminar")
                         .fontWeight(.bold)
-                        .font(.largeTitle)
-                }// modificando a toda la caja
-                // uigradients
-                .frame(minWidth: 0,maxWidth: .infinity)
-                .padding()
-                .background(LinearGradient(gradient: Gradient(colors: [Color("Quepal-1"),Color("Quepal-2")]),
-                startPoint: .leading, endPoint: .trailing))
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .cornerRadius(60)
-                .shadow(color:.gray,radius: 10.0,x:20,y:3)
-                //tamaño de boton
-                .padding(.horizontal,30)
-            }
+                    
+                }// modificando a toda la caja, uigradients
+                
+                
+            }//llamado de funcion fuera de la caja
+            .buttonStyle(ButtonBasicStyle())
             
         }
         
-  
+        
     }
     
 }
@@ -135,4 +122,42 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+struct ButtonBasicStyle : ButtonStyle {
+    // cargar todas las modificadores
+    // modificando a toda la caja
+    func makeBody(configuration: Configuration) -> some View {
+        
+        configuration.label
+        
+            .frame(minWidth: 0,maxWidth: .infinity)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color("Quepal-1"),Color("Quepal-2")]),
+                                       startPoint: .leading, endPoint: .trailing))
+            .font(.largeTitle)
+            .foregroundColor(.white)
+            .cornerRadius(60)
+            .shadow(color:.gray,radius: 10.0,x:20,y:3)
+        //tamaño de boton
+            .padding(.horizontal,30)
+        // efecto (animacion)de boton pulsado
+            .scaleEffect(configuration.isPressed ? 0.8: 1.0)
+        
+        
+    }
+    
+    
+}
+struct buttonBasicStyle2 : ButtonStyle {
+    
+    func makeBody(configuration: Configuration) -> some View {
+        
+        configuration.label
+            .padding()
+            .background(Color.red)
+            .font(.largeTitle)
+            .foregroundColor(.white)
+            .cornerRadius(60)
+    }
+    
 }

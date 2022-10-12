@@ -112,6 +112,7 @@ struct ContentView: View {
                         .font(.largeTitle)
                 }// modificando a toda la caja
                 // uigradients
+                .frame(minWidth: 0,maxWidth: .infinity)
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors: [Color("Quepal-1"),Color("Quepal-2")]),
                 startPoint: .leading, endPoint: .trailing))
@@ -119,6 +120,8 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .cornerRadius(60)
                 .shadow(color:.gray,radius: 10.0,x:20,y:3)
+                //tamaño de boton
+                .padding(.horizontal,30)
             }
             
         }

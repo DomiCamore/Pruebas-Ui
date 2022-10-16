@@ -10,49 +10,40 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        HStack{
+        HStack{ //green
+            ZStack(alignment: .topTrailing) {
+                Image("hammer_520032")
+                    .resizable()
+                    .scaledToFit()
+
+                Image("oneHour-label")
+                    .frame(width: 96, height: 20)
+
+            }.padding(EdgeInsets(top: 9, leading: 10, bottom: 27, trailing: 0))
+                .background(Color(.gray))
+                .frame(width: 126)
             
-            HStack{
-                ZStack{
-                    
-                    ImageView(imageView: "hammer_520032",
-                              imageOneHour: "oneHour-label")
-                    
-                    
-                }.padding()
-                
-                
-                VStack (alignment: .leading){
-                    DescriptionProductView(brandLabel: "Redline",
-                                           productLabel: "Martillo una 24 onzas \nmango fibra 15C8241",
-                                           quantity: "Cantidad : ",
-                                           amount: "1",
-                                           imagePrice: "price-Internet",
-                                           price2: "$38.900",
-                                           typeQuantity: "UND",
-                                           statePriceLabel: "Normal :",
-                                           Price1:"$46.900", fontCustomMedium: "Lato-Regular.ttf")
-                    
-                }
-                
+            VStack (alignment: .leading){
+                DescriptionProductView(brandLabel: "Redline",
+                                       productLabel: "Martillo una 24 onzas \nmango fibra 15C8241",
+                                       quantity: "Cantidad : ",
+                                       amount: "1",
+                                       imagePrice: "price-Internet",
+                                       price2: "$38.900",
+                                       typeQuantity: "UND",
+                                       statePriceLabel: "Normal :",
+                                       Price1:"$46.900", fontCustomMedium: "Lato-Regular.ttf")
                 
             }
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 7, trailing: 5))
+            .background(Color(.orange))
             
-            
-            .background(Color(.green))
-            .padding()
-        }
-        
+        } //green
+        .background(Color(.green))
+        .frame(maxWidth: .infinity)
     }
-    
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .previewLayout(.fixed(width: 294, height: 60))
-    }
-}
 struct DescriptionProductView: View {
     
     var brandLabel :String
@@ -69,7 +60,6 @@ struct DescriptionProductView: View {
     
     var body: some View {
         
-        HStack{
             VStack(alignment:.leading){
                 Text(brandLabel)
                     .font(Font.custom(fontCustomMedium, size: 14.0))
@@ -77,15 +67,14 @@ struct DescriptionProductView: View {
                     .foregroundColor(Color("neutral-gray-cold"))
                 
                 
-               
-                    Text(productLabel)
-                        .font(Font.custom(fontCustomMedium, size: 16.0))
-                        .foregroundColor(Color("neutral-gray-base"))
-                        .lineLimit(2)
-                        .padding(0)
-                   
-                    
-            
+                
+                Text(productLabel)
+                    .font(Font.custom(fontCustomMedium, size: 16.0))
+                    .foregroundColor(Color("neutral-gray-base"))
+                    .lineLimit(2)
+                
+                
+                
                 
                 HStack {
                     Text(quantity)
@@ -133,45 +122,7 @@ struct DescriptionProductView: View {
                         .font(Font.custom(fontCustomMedium, size: 14.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))
-                    
-                    
                 }
-                
-                
-                
             }
-            
-            
-            
-            
-            
         }
-        
-    }
-}
-
-struct ImageView: View {
-    var imageView :String
-    var imageOneHour: String?
-    
-    var body: some View {
-        
-        Image(imageView)
-            .resizable()
-            .scaledToFit()
-            .offset(x:12.0,y:-12)
-        
-        
-        
-        
-        
-        
-        imageOneHour.map({
-            Image($0)
-                .offset(x:35.0,y:-72)
-            
-            
-        })
-        
-    }
 }

@@ -11,7 +11,6 @@
 		6B86970328F861A0002C5736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B86970228F861A0002C5736 /* ContentView.swift */; };
 		6B86970528F861A3002C5736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B86970428F861A3002C5736 /* Assets.xcassets */; };
 		6B86970828F861A3002C5736 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B86970728F861A3002C5736 /* Preview Assets.xcassets */; };
-		6B86971328F9CCC8002C5736 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B86971228F9CCC8002C5736 /* CardDataModel.swift */; };
 		6BC9F3E728FBA6D00049410D /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 6BC9F3E628FBA6D00049410D /* Lato */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +20,6 @@
 		6B86970228F861A0002C5736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B86970428F861A3002C5736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B86970728F861A3002C5736 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6B86971228F9CCC8002C5736 /* CardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
 		6BC9F3E628FBA6D00049410D /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Lato; path = ../../../Documents/Lato; sourceTree = "<group>"; };
 		6BC9F3E828FBA7600049410D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 				6B86970028F861A0002C5736 /* homeApp.swift */,
 				6B86970228F861A0002C5736 /* ContentView.swift */,
 				6BC9F3E628FBA6D00049410D /* Lato */,
-				6B86971228F9CCC8002C5736 /* CardDataModel.swift */,
 				6B86970428F861A3002C5736 /* Assets.xcassets */,
 				6B86970628F861A3002C5736 /* Preview Content */,
 			);
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B86970328F861A0002C5736 /* ContentView.swift in Sources */,
-				6B86971328F9CCC8002C5736 /* CardDataModel.swift in Sources */,
 				6B86970128F861A0002C5736 /* homeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

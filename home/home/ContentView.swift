@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        ProductRow(brandLabel: "Redline",
+        let productData = ProductData(brandLabel: "Redline",
                productLabel: "Martillo una 24 onzas \nmango fibra 15C8241",
                quantity: "Cantidad : ",
                amount: "1",
@@ -18,12 +18,14 @@ struct ContentView: View {
                price2: "$38.900",
                typeQuantity: "UND",
                statePriceLabel: "Normal :",
-               Price1:"$46.900", fontCustomMedium: "Lato-Regular.ttf")
+               Price1:"$46.900")
+        
+        ProductCell(productData: productData)
+        
     }
 }
 
-struct ProductRow: View {
-    
+struct ProductData {
     var brandLabel :String
     var productLabel : String
     var quantity : String
@@ -33,8 +35,12 @@ struct ProductRow: View {
     var typeQuantity : String
     var statePriceLabel : String
     var Price1 : String
-    var fontCustomMedium : String
+}
+
+struct ProductCell: View {
     
+    var productData: ProductData
+    var fontCustomMedium = "Lato-Regular.ttf"
     
     var body: some View {
         
@@ -52,38 +58,38 @@ struct ProductRow: View {
                 .frame(minWidth: 0, maxWidth: 140)
             
             VStack(alignment:.leading){
-                Text(brandLabel)
+                Text(productData.brandLabel)
                     .font(Font.custom(fontCustomMedium, size: 14.0))
                     .fontWeight(.bold)
                     .foregroundColor(Color("neutral-gray-cold"))
                 
-                Text(productLabel)
+                Text(productData.productLabel)
                     .font(Font.custom(fontCustomMedium, size: 16.0))
                     .foregroundColor(Color("neutral-gray-base"))
                     .lineLimit(2)
                 
                 HStack {
-                    Text(quantity)
+                    Text(productData.quantity)
                         .font(Font.custom(fontCustomMedium, size: 14))
                         .fontWeight(.heavy)
                         .foregroundColor(Color("neutral-gray-cold"))
                     
-                    Text(amount)
+                    Text(productData.amount)
                         .font(Font.custom(fontCustomMedium, size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))
                 }
                 
-                Image(imagePrice)
+                Image(productData.imagePrice)
                 
                 //  precio Internet-price normal
                 HStack {
-                    Text(price2.uppercased())
+                    Text(productData.price2.uppercased())
                         .font(Font.custom(fontCustomMedium, size: 17.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-base"))
                     
-                    Text(typeQuantity.uppercased())
+                    Text(productData.typeQuantity.uppercased())
                         .font(Font.custom(fontCustomMedium, size: 14.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-base"))
@@ -91,18 +97,18 @@ struct ProductRow: View {
                 }
                 
                 HStack {
-                    Text(statePriceLabel)
+                    Text(productData.statePriceLabel)
                         .font(Font.custom(fontCustomMedium, size: 14.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))
                         .lineLimit(2)
                     
-                    Text(Price1)
+                    Text(productData.Price1)
                         .font(Font.custom(fontCustomMedium, size: 14.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))
                     
-                    Text(typeQuantity)
+                    Text(productData.typeQuantity)
                         .font(Font.custom(fontCustomMedium, size: 14.0))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))

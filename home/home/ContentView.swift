@@ -10,41 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        HStack{ //green
-            ZStack(alignment: .topTrailing) {
-                Image("hammer_520032")
-                    .resizable()
-                    .scaledToFit()
-
-                Image("oneHour-label")
-                    .frame(width: 96, height: 20)
-
-            }.padding(EdgeInsets(top: 9, leading: 10, bottom: 27, trailing: 0))
-                .background(Color(.gray))
-                .frame(width: 126)
-            
-            VStack (alignment: .leading){
-                DescriptionProductView(brandLabel: "Redline",
-                                       productLabel: "Martillo una 24 onzas \nmango fibra 15C8241",
-                                       quantity: "Cantidad : ",
-                                       amount: "1",
-                                       imagePrice: "price-Internet",
-                                       price2: "$38.900",
-                                       typeQuantity: "UND",
-                                       statePriceLabel: "Normal :",
-                                       Price1:"$46.900", fontCustomMedium: "Lato-Regular.ttf")
-                
-            }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 7, trailing: 5))
-            .background(Color(.orange))
-            
-        } //green
-        .background(Color(.green))
-        .frame(maxWidth: .infinity)
+        ProductRow(brandLabel: "Redline",
+               productLabel: "Martillo una 24 onzas \nmango fibra 15C8241",
+               quantity: "Cantidad : ",
+               amount: "1",
+               imagePrice: "price-Internet",
+               price2: "$38.900",
+               typeQuantity: "UND",
+               statePriceLabel: "Normal :",
+               Price1:"$46.900", fontCustomMedium: "Lato-Regular.ttf")
     }
 }
 
-struct DescriptionProductView: View {
+struct ProductRow: View {
     
     var brandLabel :String
     var productLabel : String
@@ -60,21 +38,29 @@ struct DescriptionProductView: View {
     
     var body: some View {
         
+        HStack {
+            ZStack(alignment: .topTrailing) {
+                Image("hammer_520032")
+                    .resizable()
+                    .scaledToFit()
+                
+                Image("oneHour-label")
+                    .frame(width: 96, height: 20)
+                
+            }.padding(EdgeInsets(top: 9, leading: 10, bottom: 27, trailing: 0))
+                .background(Color(.white))
+                .frame(minWidth: 0, maxWidth: 140)
+            
             VStack(alignment:.leading){
                 Text(brandLabel)
                     .font(Font.custom(fontCustomMedium, size: 14.0))
                     .fontWeight(.bold)
                     .foregroundColor(Color("neutral-gray-cold"))
                 
-                
-                
                 Text(productLabel)
                     .font(Font.custom(fontCustomMedium, size: 16.0))
                     .foregroundColor(Color("neutral-gray-base"))
                     .lineLimit(2)
-                
-                
-                
                 
                 HStack {
                     Text(quantity)
@@ -86,7 +72,6 @@ struct DescriptionProductView: View {
                         .font(Font.custom(fontCustomMedium, size: 14))
                         .fontWeight(.bold)
                         .foregroundColor(Color("neutral-gray-cold"))
-                    
                 }
                 
                 Image(imagePrice)
@@ -104,7 +89,6 @@ struct DescriptionProductView: View {
                         .foregroundColor(Color("neutral-gray-base"))
                     
                 }
-                
                 
                 HStack {
                     Text(statePriceLabel)
@@ -125,4 +109,13 @@ struct DescriptionProductView: View {
                 }
             }
         }
+        .background(Color(.white))
+        .frame(maxWidth: .infinity)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

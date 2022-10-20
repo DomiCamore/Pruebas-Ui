@@ -67,7 +67,7 @@ struct ProductCard: View {
                             .font(Font.system(size: 13))
                             .fontWeight(Font.Weight.heavy)
                         HStack {
-                            //base feeling
+                            //base  feeling
                             Text(category!)
                             .font(Font.custom("HelveticaNeue-Medium", size: 12))
                                 .padding([.leading, .trailing], 10)
@@ -101,6 +101,7 @@ struct ProductCard: View {
                         .fontWeight(Font.Weight.bold)
                         .foregroundColor(Color.gray)
                     Spacer()
+                   // IMAGENES ........
                     Image("Plus-Icon")
                         .resizable()
                         .scaledToFit()

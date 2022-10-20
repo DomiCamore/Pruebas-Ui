@@ -37,7 +37,7 @@ struct CardView: View {
                         .frame(minWidth: 0, maxWidth: 150, minHeight: 150, alignment: .center)
                         .clipped()
                         .overlay(
-                        
+                            
                             Text("ENVIO EN 1 HORA")
                                 .fontWeight(Font.Weight.medium)
                                 .font(Font.system(size: 14))
@@ -45,36 +45,63 @@ struct CardView: View {
                                 .padding([.leading, .trailing], 4)
                                 .padding([.top, .bottom], 4)
                                 .background(Color("sendOneHour"))
-                               
+                            
                             , alignment: .topTrailing)
                     
-               
+                    
                 }
                 // texto
                 VStack(alignment: .leading, spacing: 6) {
                     Text(self.brand)
-                        .fontWeight(Font.Weight.heavy)
+                        .fontWeight(Font.Weight.medium)
                     Text(self.description)
-                        .font(Font.custom("HelveticaNeue-Bold", size: 16))
+                        .font(Font.custom("Lato", size: 14))
                         .foregroundColor(Color.gray)
-                    Text("Cantidad :")
+                    
                     HStack{
+                        Text("Cantidad :")
+                            .font(Font.custom("Lato", size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(Color(.gray))
+                        
+                        Text(String(self.quantity))
+                            .font(Font.custom("Lato", size: 12))
+                            .fontWeight(.medium)
+                            .foregroundColor(Color(.gray))
                         
                     }
+                    Image("price-Internet")
                     
-                   
+                    HStack(spacing: 4) {
+                        Text(String.init(format: "$%.2f", arguments: [self.offerPrice]))
+                            .font(Font.custom("Lato", size: 14))
+                        Text("UND")
+                            .font(Font.custom("Lato", size: 14))
+                            .fontWeight(Font.Weight.medium)
+                            .foregroundColor(Color.black)
+                
+                    }
+                    
+                    HStack(spacing: 4) {
+                        Text(String.init(format: "$%.2f", arguments: [self.offerPrice]))
+                            .font(Font.custom("Lato", size: 12))
+                        Text("UND")
+                            .font(Font.custom("Lato", size: 12))
+                            .fontWeight(Font.Weight.medium)
+                            .foregroundColor(Color.black)
+                
+                    }
+                    
+                    
                 }
-                .background( Color.blue)
+                
+                .background( Color.white)
                 
             }
             
-            .background( Color.red)
-            
         }
-        
     }
 }
-
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {

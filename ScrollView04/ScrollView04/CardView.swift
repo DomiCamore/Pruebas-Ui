@@ -59,7 +59,7 @@ struct CardView: View {
         //a toda la tarjeta
         .cornerRadius(12)
         //pinta los bordes stroke
-        .overlay(RoundedRectangle(cornerRadius:12).stroke(Color(red: 130/255,green: 130/255, blue: 130/255, opacity: 0.2), lineWidth: 2))
+        .overlay(RoundedRectangle(cornerRadius:12).stroke(Color(red: 130/255,green: 130/255, blue: 130/255, opacity: 0.1), lineWidth: 2))
         //padding doble
        .padding([.top,.horizontal])
        

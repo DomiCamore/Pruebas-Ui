@@ -46,6 +46,11 @@ struct ContentView: View {
                     
                 }.padding()
                 
+                VStack{
+                    Text("Maribel")
+                    Divider()
+                }
+                       
                 
                 // 1.-Boton
                 

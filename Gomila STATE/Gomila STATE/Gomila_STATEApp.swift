@@ -11,7 +11,9 @@ import SwiftUI
 struct Gomila_STATEApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            Listas()
+            
         }
     }
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Listas: View {
     var courses = [
-        Course(name: "Probabilidad y variables Aleatorias para ML E IA", image:"Capa"),
-        Course(name: "Viaje por Crucero", image: "Premium"),
+        Course(name: "Probabilidad y variables Aleatorias para MA", image:"Capa"),
+        Course(name: "Viaje por Crucero", image: "Premium",feature: true),
         Course(name: "Delivery envio a domicilio" , image: "Delivery"),
         Course(name:  "Cara feliz dia especial,aniversario", image: "Boat" ),
         Course(name: "Importacion de productos vendidos", image: "Apple")
@@ -18,12 +18,14 @@ struct Listas: View {
     ]
     
     var body: some View {
-      
+    
+        // destacar un Course
         List(courses.indices, id: \.self) { idx in
-            if idx < 1 {
+            if self.courses[idx].feature{
+         
                 CoursesfullImageRow(course:self.courses [idx])
             }else{
-                CourseRow(course: self.courses [idx])
+                CourseRow(course: self.courses[idx])
                 
             }
         }
@@ -34,6 +36,7 @@ struct Listas: View {
         var id = UUID()
         var name : String
         var image : String
+        var feature : Bool = false
         
     }
     //id.id
@@ -65,8 +68,9 @@ struct Listas: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
-                    .cornerRadius(15)
                     .padding()
+                    .cornerRadius(15)
+                  
                 
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)

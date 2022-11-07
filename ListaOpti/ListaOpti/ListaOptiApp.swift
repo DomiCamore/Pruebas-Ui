@@ -1,18 +1,17 @@
 //
-//  viewApp.swift
-//  view
+//  ListaOptiApp.swift
+//  ListaOpti
 //
-//  Created by Miguel Otero on 11/3/22.
+//  Created by Miguel Otero on 11/7/22.
 //
 
 import SwiftUI
 
 @main
-struct viewApp: App {
+struct ListaOptiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            TrackView()
         }
     }
 }

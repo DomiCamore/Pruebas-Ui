@@ -10,23 +10,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        
-        VStack(alignment :.leading,spacing: 4) {
-       
-            StatusView()
+        NavigationView {
+            VStack(alignment :.leading,spacing: 4) {
+                
+                StatusView()
+                
+                DetailView()
+                
+                
+                VStack {
+                    TrackView()
+                }.padding()
+                
+                
+                
+            }
             
-            DetailView()
-            
-            
-            VStack {
-                TrackView()
-            }.padding()
-            
-           
-            
-        }
-        
- 
+        }.navigationTitle("Rastrear mi orden")
     }
 }
 
@@ -84,11 +84,7 @@ struct DetailView: View {
                 ZStack {
                     
                     
-                    Text("ENVIO EN 1 HORA")
-                        .font(.system(size: 7))
-                        .background(Color(CGColor(red: 181/255, green: 0/255, blue: 147/255, alpha: 1)))
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
+                        Image("Envio1HoraLogo")
                         .offset(x: 30,y:-50)
                     
                 }
